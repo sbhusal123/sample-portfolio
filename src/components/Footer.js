@@ -18,10 +18,10 @@ export function Footer() {
                 </div>
                 <div className="flex flex-col text-slate-500 gap-2">
                     <a>Home</a>
-                    <a>Dedicated Developers</a>
-                    <a>Terms And COnditions</a>
-                    <a>PRiivacy Policy</a>
-                    <a>FAQ's</a>
+                    <a>About Us</a>
+                    <a>Services</a>
+                    <a>Portfolio</a>
+                    <a>FooBar</a>
                 </div>
             </div>
 

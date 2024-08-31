@@ -10,13 +10,13 @@ export function NarBar() {
         <nav className="relative w-full">
             <NavBarToolTip/>
 
-            <div className="flex flex-row sm:justify-around py-5 items-center bg-slate-950">
-                <div className="flex flex-row items-center justify-stretch">
+            <div className="flex flex-row sm:justify-around py-5 items-center bg-slate-950 sticky">
+                <div className="flex flex-row items-center">
                     <div>
                         <h1 className="text-2xl ml-5 sm:ml-0 text-white">LOGO</h1>
                     </div>
                 </div>
-                <div className="absolute right-5 sm:hidden" onClick={() => setShow(!show)}>
+                <div className="absolute right-5 sm:hidden mt-2" onClick={() => setShow(!show)}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="white" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
                         </svg>
@@ -27,16 +27,13 @@ export function NarBar() {
                                 <a>Home</a>
                             </li>
                             <li className="border-b-2 border-slate-950 hover:border-orange-500 transition  ease-in delay-50 cursor-pointer">
-                                <a>Dedicated Developers</a>
+                                <a>Services</a>
                             </li>
                             <li className="border-b-2 hover:border-orange-500 border-slate-950 transition ease-in delay-50 cursor-pointer">
                                 <a>Portfolio</a>
                             </li>
                             <li className="border-b-2 hover:border-orange-500 border-slate-950 transition ease-in delay-50 cursor-pointer">
-                                <a>FAQ's</a>
-                            </li>
-                            <li className="border-b-2 hover:border-orange-500 border-slate-950 transition ease-in delay-50 cursor-pointer">
-                                <a>Get In Touch</a>
+                                <a>Blogs</a>
                             </li>
                     </ul>
                 </div>
@@ -48,16 +45,13 @@ export function NarBar() {
                                 <a>Home</a>
                             </li>
                             <li className="border-b-2 border-gray-800 hover:border-orange-500 transition ease-in delay-50 cursor-pointer">
-                                <a>Dedicated Developers</a>
+                                <a>Services</a>
                             </li>
                             <li className="border-b-2 hover:border-orange-500 transition border-gray-800 ease-in delay-50 cursor-pointer">
                                 <a>Portfolio</a>
                             </li>
                             <li className="border-b-2 hover:border-orange-500 transition border-gray-800 ease-in delay-50 cursor-pointer">
-                                <a>FAQ's</a>
-                            </li>
-                            <li className="border-b-2 hover:border-orange-500 transition border-gray-800 ease-in delay-50 cursor-pointer">
-                                <a>Get In Touch</a>
+                                <a>Blogs</a>
                             </li>
                         </ul>
                     </div>
