@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Test Dev</title>
+        <title>This is Dev Domain</title>
       </head>
       <body>
         <NarBar/>
