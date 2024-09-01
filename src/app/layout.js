@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Webfriend | Leading IT Company in Australia</title>
+        <title>Sint ipsum duis Lorem ea.</title>
       </head>
       <body>
         <NarBar/>
