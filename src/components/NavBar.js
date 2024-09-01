@@ -1,19 +1,36 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavBarToolTip } from "./NavToolTip";
 
 
 export function NarBar() {
     const [show, setShow] = useState(false)
+    const ref = useRef(null)
+
+    const handleHamburgerClose = (event) => {
+        if(ref.current && !ref.current.contains(event.target)){
+            setShow(false)
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('click', handleHamburgerClose)
+        return () => {
+            document.removeEventListener('click', handleHamburgerClose)
+        }
+    }, [])
+
     return (
-        <nav className="relative w-full">
+        <nav className="relative w-full" ref={ref}>
             <NavBarToolTip/>
 
             <div className="flex flex-row sm:justify-around py-5 items-center bg-slate-950 sticky">
                 <div className="flex flex-row items-center">
                     <div>
-                        <h1 className="text-2xl ml-5 sm:ml-0 text-white">LOGO</h1>
+                        <h1 className="text-2xl ml-5 sm:ml-0 text-white">
+                            <a href="" >LOGO</a>
+                        </h1>
                     </div>
                 </div>
                 <div className="absolute right-5 sm:hidden mt-2" onClick={() => setShow(!show)}>
@@ -24,13 +41,13 @@ export function NarBar() {
                 <div className="hidden sm:block">
                     <ul className="flex flex-col sm:flex-row justify-start gap-8 text-md font-semibold text-slate-400">
                             <li className="border-b-2 hover:border-orange-500 border-slate-950 transition ease-in delay-50 cursor-pointer">
-                                <a>Home</a>
+                                <a href="">Home</a>
                             </li>
                             <li className="border-b-2 border-slate-950 hover:border-orange-500 transition  ease-in delay-50 cursor-pointer">
                                 <a>Services</a>
                             </li>
                             <li className="border-b-2 hover:border-orange-500 border-slate-950 transition ease-in delay-50 cursor-pointer">
-                                <a>Portfolio</a>
+                                <a href="#ourWork">Portfolio</a>
                             </li>
                             <li className="border-b-2 hover:border-orange-500 border-slate-950 transition ease-in delay-50 cursor-pointer">
                                 <a>Blogs</a>
